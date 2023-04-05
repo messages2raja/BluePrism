@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,40 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.main {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  display: flex;
+}
+.main aside {
+  width: 30vw;
+  border: 1px solid gray;
+  height: 80vh;
+  overflow: scroll;
+}
+.main section {
+  width: 70vw;
+  border: 1px solid gray;
+  height: 80vh;
+  overflow: scroll;
+}
+.scheduleTile{
+  margin:0.5em;
+  padding:0
+}
+.scheduleTile li {
+  list-style-type: none;
+  border: 1px solid gray;
+  margin: 10px;
+  padding: 6px;
+  border-radius: 10px;
+  background: #f3f3f3;
+}
+.scheduleTile li.selected {
+  background: #a7a7a7;
+}
 .App-link {
   color: #61dafb;
 }
