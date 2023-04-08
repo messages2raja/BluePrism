@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/schedules-app/static/css/main.4e2a9fc9.css",
-    "main.js": "/schedules-app/static/js/main.94cda0c5.js",
-    "static/js/787.c4e7f8f9.chunk.js": "/schedules-app/static/js/787.c4e7f8f9.chunk.js",
-    "index.html": "/schedules-app/index.html",
-    "main.4e2a9fc9.css.map": "/schedules-app/static/css/main.4e2a9fc9.css.map",
-    "main.94cda0c5.js.map": "/schedules-app/static/js/main.94cda0c5.js.map",
-    "787.c4e7f8f9.chunk.js.map": "/schedules-app/static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/BluePrism/static/css/main.4e2a9fc9.css",
+    "main.js": "/BluePrism/static/js/main.70c938e0.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/BluePrism/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/BluePrism/index.html",
+    "main.4e2a9fc9.css.map": "/BluePrism/static/css/main.4e2a9fc9.css.map",
+    "main.70c938e0.js.map": "/BluePrism/static/js/main.70c938e0.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/BluePrism/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e2a9fc9.css",
-    "static/js/main.94cda0c5.js"
+    "static/js/main.70c938e0.js"
   ]
 }
