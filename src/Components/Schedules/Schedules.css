@@ -1,0 +1,49 @@
+
+.scheduleTile{
+    margin:0.5em;
+    padding:0
+  }
+  .scheduleTile li {
+    list-style-type: none;
+    border: 1px solid #9d97ba;
+    margin: 10px;
+    padding: 16px;
+    border-radius: 10px;
+    background: #f3f2fd;
+    cursor: pointer;
+    color:#462d6f;
+  }
+  .scheduleTile li:hover {
+    background: #cdc8e9;
+  }
+  h5{
+    margin:0;
+  }
+  .scheduleTile li p{
+  font-size: 12px;
+  }
+  .scheduleTile li.selected {
+    background: #cdc8e9;
+    -webkit-box-shadow: 7px 7px 5px -6px rgba(70, 18, 159, 0.58);
+  -moz-box-shadow: 7px 7px 5px -6px rgba(70, 18, 159, 0.58);
+  box-shadow: 7px 7px 5px -6px rgba(70, 18, 159, 0.58);
+  }
+  .retire{
+    background: #a64c9c;
+  }
+  .unretire{
+    background: #6a40ae;
+  }
+  .App-link {
+    color: #61dafb;
+  }
+  button{
+    background: #462d6f;
+      padding: 12px;
+      width: 100px;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  

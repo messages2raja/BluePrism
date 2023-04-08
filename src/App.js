@@ -1,50 +1,50 @@
 import "./App.css";
-import Schedules from "./Schedules";
+import Schedules from "./Components/Schedules/Schedules";
 import { useState, useEffect } from "react";
-import ReactTable from "./Table/ReactTable";
+import ScheduleTable from "./Components/ScheduleTable/ScheduleTable";
+import schedulesService from './Services/Schedules'
 function App() {
-  const [schedules, setSchedules] = useState([]);
+  const [scheduleList, setScheduleList] = useState([]);
   const [currentScheduleId, setCurrentScheduleId] = useState();
   const [currentScheduleLog, setCurrentScheduleLog] = useState([]);
 
   useEffect(() => {
+    const getSchedules = async() => {
+      const schedules = await schedulesService.getSchedules();
+      console.log('schedules',schedules)
+      setScheduleList(schedules);
+      setCurrentScheduleId(schedules[0].id)
+    } 
     getSchedules();
+   
   }, []);
 
   useEffect(() => {
-    getScheduleLogs();
+    const getScheduleLog = async() => {
+      const scheduleLog = await schedulesService.getScheduleLogs(currentScheduleId);
+      console.log('currentScheduleLog',currentScheduleLog)
+      setCurrentScheduleLog(scheduleLog);
+    } 
+    getScheduleLog();
+
   }, [currentScheduleId]);
 
-  const getSchedules = async () => {
-    const data = await fetch("http://localhost:3000/schedules");
-    const dataJson = await data.json();
-    setSchedules(dataJson);
-    setCurrentScheduleId(dataJson[0].id)
-    console.log(dataJson);
-  };
-  const getScheduleLogs = async () => {
-    const data = await fetch("http://localhost:3000/scheduleLogs");
-    const dataJson = await data.json();
-    const filteredData = dataJson.filter(
-      (data) => data.scheduleId === currentScheduleId
-    );
-    console.log(filteredData);
-    setCurrentScheduleLog(filteredData);
-  };
   return (
     <div>
-      <header className="App-header">Header</header>
+      <header className="App-header">Logo</header>
       <div className="main">
+      <h3>Schedules</h3>
         <div className="content">
-          <aside>
+         <aside>
             <Schedules
-              schedules={schedules}
+              scheduleList={scheduleList}
+              setScheduleList={setScheduleList}
               setCurrentScheduleId={setCurrentScheduleId}
               currentScheduleId={currentScheduleId}
             />
           </aside>
           <section>
-            <ReactTable tabledata={currentScheduleLog} />
+            <ScheduleTable tabledata={currentScheduleLog} />
           </section>
         </div>
       </div>

@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { useTable, useGlobalFilter,useSortBy } from "react-table";
 import { COLUMNS } from "./columns";
 import GlobalFilter from "./GlobalFilter";
-import "./table.css";
-export default function ReactTable({ tabledata }) {
+import "./ScheduleTable.css";
+export default function ScheduleTable({ tabledata }) {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => tabledata, [tabledata]);
   const tableInstance = useTable(
