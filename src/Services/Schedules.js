@@ -1,4 +1,4 @@
-const BASEURL = 'http://localhost:3000';
+const BASEURL = 'https://aggressive-bonnet-goat.cyclic.app';
 
 //To get the list of schedules from API
 export const getSchedules = async () => {
